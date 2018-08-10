@@ -1,0 +1,7 @@
+{
+
+    "extends": [
+        "@neil188/eslint-config"
+    ]
+
+}
