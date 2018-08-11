@@ -3,7 +3,10 @@ const escapeHtml = require('escape-html');
 const { accessControl } = require('@neil188/setaccesscontrol');
 
 const URL = process.env.endPoint;
-const setAccessControl = accessControl(process.env.defaultOrigin, true);
+const setAccessControl = accessControl(
+    process.env.defaultOrigin,
+    process.env.allowLocal
+);
 
 const shorten = (str = '', len = 300, trail='...') => {
     if (str.len <=len) return str;
